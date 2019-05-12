@@ -10,40 +10,7 @@
 #include <pthread.h>
 #include <time.h>
 
-
-int main(void *arg)
-{
-    pid_t pid, sid;
-
-    pid = fork();
-
-    if (pid < 0)
-    {
-        exit(EXIT_FAILURE);
-    }
-
-    if (pid > 0)
-    {
-        exit(EXIT_SUCCESS);
-    }
-
-    umask(0);
-
-    sid = setsid();
-
-    if (sid < 0)
-    {
-        exit(EXIT_FAILURE);
-    }
-
-    if ((chdir("/")) < 0)
-    {
-        exit(EXIT_FAILURE);
-    }
-
-    close(STDIN_FILENO);
-    close(STDOUT_FILENO);
-    close(STDERR_FILENO);
+int main(){
 
     while (1)
     {
@@ -99,7 +66,5 @@ int main(void *arg)
         }
         fclose(isi_cron);
     }
-
-    exit(EXIT_SUCCESS);
 }
 

@@ -74,8 +74,6 @@ int main(void *arg)
 
         FILE *config = fopen("/home/paramestri/crontab.data", "r");
 
-        char cmi[3], ch[3], cdm[3], cmo[3], cdw[2];
-        char s[500] = "";
         int i = 0;
         while () != EOF)
             {

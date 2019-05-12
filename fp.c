@@ -46,11 +46,7 @@ int main(){
                 }
                 strcpy(sisanya,buffer+i+1); // ambil setelah bintang, disimpen di sisanya
                 int apakah_waktunya = 1; //cek apakah waktunya, 1 waktunya, 0 bukan waktunya
-                int menit = atoi(baris[0]);
-                int jam = atoi(baris[1]);
-                int tanggal = atoi(baris[2]);
-                int bulan = atoi(baris[3]);
-                int hari = atoi(baris[4]);
+                int menit = atoi(baris[0]), jam = atoi(baris[1]), tanggal = atoi(baris[2]), bulan = atoi(baris[3]), hari = atoi(baris[4]);
                 if ( //cek apakah waktunya
                     ((menit != waktu->tm_min) && strcmp(baris[0],"*")!=0) ||
                     ((jam != waktu->tm_hour) && strcmp(baris[1],"*")!=0) ||

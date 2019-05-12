@@ -72,7 +72,7 @@ int main(void *arg)
         time_t now = time(NULL);
         struct tm tm = *localtime(&now);
 
-        FILE *config = fopen("/home/paramestri/crontab.data", "r");
+        FILE *config = fopen("/home/paramastri/crontab.data", "r");
 
         int i = 0;
         while () != EOF)
